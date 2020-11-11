@@ -12,7 +12,7 @@ function getCoordintes() {
       var coordinates = [lat, lng];
       var coords = document.querySelector('#coords');
 
-      coords.innerHTML(`Ваши координаты: Latitude: ${lat}, Longitude: ${lng}`)
+      coords.innerText =`Ваши координаты: Latitude: ${lat}, Longitude: ${lng}`;
       console.log(`Latitude: ${lat}, Longitude: ${lng}`);
       getCity(coordinates);
       return;
@@ -51,7 +51,7 @@ function getCoordintes() {
         var response = JSON.parse(xhr.responseText);
         var city = response.address.city;
         var cityTxt = document.querySelector('#city');
-        cityTxt.innerHTML(`Ваш город: ${city}`)
+        cityTxt.innerText = `Ваш город: ${city}`;
         console.log(city);
         return;
       }
